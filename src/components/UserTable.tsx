@@ -73,14 +73,19 @@ const UserTable = ({ allData }: { allData: UserData[] }) => {
         </TableBody>
       </Table>
       <div className="flex items-center gap-2 mt-4">
-        <Button onClick={handlePrevious} disabled={currentPage === 0}>
+        <Button onClick={handlePrevious} disabled={currentPage === 0}
+        className="button-primary"
+        >
           Previous
         </Button>
-        <span>
+        <span 
+        
+        >
           Page {currentPage + 1} of {Math.ceil(allData.length / recordsPerPage)}
         </span>
         <Button
           onClick={handleNext}
+          className="button-primary"
           disabled={(currentPage + 1) * recordsPerPage >= allData.length}
         >
           Next

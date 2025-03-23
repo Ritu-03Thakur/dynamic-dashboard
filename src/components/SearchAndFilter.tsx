@@ -34,6 +34,7 @@ const SearchAndFilter = ({ allData }: { allData: UserData[] }) => {
         />
         <Button 
         onClick={()=> setSearch(search)}
+        className="button-primary"
         >Search</Button>
       </div>
       <UserTable allData={filteredData}/>

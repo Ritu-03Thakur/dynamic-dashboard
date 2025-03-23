@@ -1,10 +1,16 @@
 import jwt from "jsonwebtoken";
 
-const SECRET_KEY = "jwtToken" ; 
+const SECRET_KEY = "jwtToken";
 
-const CreateTokenByJwt = (data : string) => {
-    const token = jwt.sign(data,SECRET_KEY)
-   return token ; 
-}
+const CreateTokenByJwt = () => {
+  const payload = {
+    id: "12345",
+    email: "testuser@example.com",
+    role: "admin",
+    exp: Math.floor(Date.now() / 1000) + 60 * 60,
+  };
 
-export {CreateTokenByJwt}
+  const token = jwt.sign(payload , SECRET_KEY) ;
+  return  token;
+};
+export { CreateTokenByJwt };

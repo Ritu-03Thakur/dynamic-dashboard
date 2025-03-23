@@ -9,8 +9,10 @@ const Header = () => {
         redirect("/")
     }
   return (
-    <div className='flex justify-end'>
-      <Button onClick={handleLogout}>Logout</Button>
+    <div className='flex justify-end items-center w-[650px] overflow-hidden'>
+      <Button onClick={handleLogout} 
+      className='button-primary'
+      >Logout</Button>
     </div>
   )
 }

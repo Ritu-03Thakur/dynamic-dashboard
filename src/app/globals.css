@@ -45,13 +45,13 @@
 
 :root {
   --radius: 0.625rem;
-  --background: "3E3F5B";
+  --background: oklch(9.2% 0.0173 148.76 / 62.83%);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: oklch(9.2% 0.0173 148.76 / 17.11%);
+  --primary: oklch(9.2% 0.0173 148.76 / 17.11%);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -68,14 +68,14 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: oklch(9.2% 0.0173 148.76 / 17.11%);
+  --sidebar-foreground: oklch(70% 0.235 148.76);
+  --sidebar-primary: oklch(9.2% 0.0173 148.76 / 17.11%);
+  --sidebar-primary-foreground: oklch(9.2% 0.0173 148.76 / 17.11%);
+  --sidebar-accent: oklch(35.74% 0.1085 148.76 / 88.5%);
+  --sidebar-accent-foreground: oklch(70% 0.235 148.76);
+  --sidebar-border: oklch(70% 0.235 148.76);
+  --sidebar-ring: oklch(70% 0.235 148.76);
 }
 
 .dark {
@@ -104,7 +104,7 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(9.2% 0.0173 148.76 / 17.11%);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -117,6 +117,14 @@
     @apply border-border outline-ring/50  ;
   }
   body {
-    @apply bg-black ;
+    @apply bg-black text-gray-100 ;
   }
+}
+
+.button-primary{
+  @apply flex m-auto bg-green-500 hover:bg-green-900 text-gray-100  ; 
+}
+
+.text-primary{
+  @apply text-green-700 font-medium ;
 }

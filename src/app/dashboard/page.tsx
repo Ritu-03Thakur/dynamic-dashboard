@@ -70,9 +70,9 @@ const DashBoard = () => {
     {
       isAuthorized &&
 
-      <SidebarProvider>
+      <SidebarProvider className="dark">
        <SideBar/>
-       <main>
+       <main >
       <SidebarTrigger />
       <DashboardPage initialData={allData} />
        </main>
